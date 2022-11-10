@@ -198,6 +198,11 @@
     }
   </script> -->
   <style>
+    body,
+    html {
+      scroll-behavior: smooth;
+    }
+
     /* update */
     #container {
       max-width: 450px;
@@ -333,7 +338,7 @@
       padding: 20px 0px;
       background-attachment: fixed;
       background-position: center;
-      margin: 20px 0px 20px 0px;
+      margin: 0px 0px 0px 0px;
     }
 
     .max-width-content {
@@ -375,7 +380,7 @@
       font-size: 18px;
       color: #BAD1C2;
       letter-spacing: 1px;
-      border-bottom: 1px solid #BAD1C2;
+      border-bottom: 2px solid #BAD1C2;
       padding-bottom: 2px;
     }
 
@@ -403,7 +408,7 @@
       font-size: 18px;
       color: #BAD1C2;
       letter-spacing: 1px;
-      border-bottom: 1px solid #BAD1C2;
+      border-bottom: 2px solid #BAD1C2;
       padding-bottom: 2px;
     }
 
@@ -429,12 +434,12 @@
       color: #ff5e15;
       margin-top: 0rem;
       letter-spacing: 1px;
-      border-bottom: 1px solid #ff5e15;
+      border-bottom: 2px solid #ff5e15;
       padding-bottom: 2px;
     }
 
     .bottom-work>p {
-      letter-spacing: 1px;
+      /* letter-spacing: 1px; */
       font-family: Trebuchet MS;
       font-size: 16px;
     }
@@ -456,6 +461,65 @@
       }
     }
 
+    .contact-us-banner {
+      background-image: linear-gradient(180deg, rgba(165, 206, 199, 0.2) 0%, #151f33 100%), url('./607a9eb5b77a6.jpg') !important;
+      background-position: 0px -100px;
+      background-attachment: fixed;
+      height: 300px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      top: 0;
+      text-align: center;
+      padding: 0px 10px;
+    }
+
+    .contact-us-banner>h1 {
+      font-family: Trebuchet MS;
+      font-size: 42px;
+      font-weight: bolder;
+      color: white !important;
+      margin-bottom: 1rem;
+    }
+
+    .contact-us-banner>p {
+      color: white;
+      font-size: 16px;
+      font-family: Trebuchet MS;
+    }
+
+    .scroller-scroll {
+      position: absolute;
+      bottom: 0;
+      background-color: #2B2B2B;
+      padding: 15px 100px 15px 100px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .scroller-scroll>a {
+      color: white;
+      font-family: Trebuchet MS;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 576px) {
+      .scroller-scroll{
+        padding: 15px 50px 15px 50px;
+      }
+      .scroller-scroll>a{
+        font-size: 16px;
+      }
+      .contact-us-banner>h1{
+        font-size: 32px;
+      }
+    }
     /* update */
   </style>
 </head>
@@ -592,10 +656,19 @@
   </div>
   <div class="clearfix"></div>
 
+  <div class="contact-us-banner">
+    <h1>Contact Us</h1>
+    <p>Fill out this brief form and we’ll be in touch with you in less than 24 hours.</p>
+
+    <div class="scroller-scroll">
+      <a href="#contact_enquiry_scroll">DROP YOUR QUERY</a>
+    </div>
+  </div>
+
   <div class="wrap box-wrap">
 
     <!-- <div class="container-left product-item"> -->
-    <div class="max-width-content">
+    <div class="max-width-content" id="contact_enquiry_scroll">
       <div class="side-container-grid-row">
         <div>
           <div class="container-left product-item" id="container">
@@ -625,7 +698,7 @@
             </form>
 
             <div class="bottom-work">
-              <h6><span>Work</span></h6>
+              <h6><span><b>Work</b></span></h6>
               <p>Godown number 1447, Steel Market, Kalamboli, Navi Mumbai</p>
             </div>
             <!-- update -->
@@ -698,11 +771,11 @@
 
 
 
-  <div class="max-width-content">
-    <h3><strong>Our Location</strong></h3>
+  <div>
+    <!-- <h3><strong>Our Location</strong></h3> -->
     <p class="ab-txt"><iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.422935702043!2d72.81732754445537!3d18.956920158041875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce11e7a19b9d%3A0x2cbbb8d112984d82!2sAmardeep+Steel+Centre!5e0!3m2!1sen!2sin!4v1524562431496"
-        width="100%" height="250" frameborder="0" style="border:0"></iframe></p>
+        width="100%" height="350" frameborder="0" style="border:0"></iframe></p>
   </div>
   <!-- </div> -->
 
