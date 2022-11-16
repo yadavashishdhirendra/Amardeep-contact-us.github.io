@@ -8,6 +8,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="css/iview.css" rel="stylesheet" type="text/css" />
@@ -510,16 +514,145 @@
     }
 
     @media screen and (max-width: 576px) {
-      .scroller-scroll{
+      .scroller-scroll {
         padding: 15px 50px 15px 50px;
       }
-      .scroller-scroll>a{
+
+      .scroller-scroll>a {
         font-size: 16px;
       }
-      .contact-us-banner>h1{
+
+      .contact-us-banner>h1 {
         font-size: 32px;
       }
     }
+
+    /* navbarstarts here */
+    .navbar-nav>li>.dropdown-menu {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+
+    .dropdown-menu {
+      width: 100%;
+      min-width: 250px;
+    }
+
+    .mega-dropdown {
+      position: static !important;
+    }
+
+    /* .navbar-brand {
+      border-right: 2px solid #eee;
+    } */
+
+    .mega-dropdown-menu>li>ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .mega-dropdown-menu>li>ul>li {
+      list-style: none;
+    }
+
+    .mega-dropdown-menu>li>ul>li>a {
+      display: block;
+      padding: 3px 20px;
+      clear: both;
+      font-weight: normal;
+      line-height: 1.428571429;
+      color: #999;
+      white-space: normal;
+    }
+
+    .mega-dropdown-menu>li>ul>li>a:hover {
+      color: #e2e2e2;
+      text-decoration: none;
+    }
+
+    .dropdown-header {
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-bottom: 1px solid #f1f1f1;
+      margin: 10px 0;
+      color: #000;
+    }
+
+    .menu-images {
+      padding: 5px 20px 5px 20px;
+    }
+
+    .dropdown.mega-dropdown:hover,
+    .dropdown.mega-dropdown:active,
+    .dropdown.mega-dropdown:focus {
+      background: #eee;
+    }
+
+    .single-item:hover,
+    .single-item:active,
+    .single-item:focus {
+      background: #eee;
+    }
+
+    span.glyphicon.glyphicon-chevron-down {
+      padding: 2px 10px;
+    }
+
+    .dropdown-menu {
+      background: #fff !important;
+    }
+
+    .fa-chevron-down {
+      font-size: 12px;
+    }
+
+    .navbar-nav>li {
+      font-family: Trebuchet MS;
+      letter-spacing: 0.5px;
+      font-size: 16px;
+    }
+
+    .navbar {
+      margin-bottom: 0px;
+      transition: all 0.4s ease-in;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* @media screen and (max-width: 992px) {
+      .navbar-collapse{
+        max-height: 600px;
+        overflow-y: scroll;
+      }
+    } */
+
+    .navbar-brand>img {
+      width: 160px;
+    }
+
+    .navbar-brand {
+      height: auto !important;
+    }
+
+    .navbar-container-fluid {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+
+    @media screen and (max-width: 992px) {
+      .navbar {
+        display: initial;
+        justify-content: initial;
+        align-items: initial;
+      }
+    }
+
+    .banner {
+      padding-top: 0px !important;
+    }
+
     /* update */
   </style>
 </head>
@@ -530,7 +663,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!-- header-section-starts -->
-  <div class="header">
+  <!-- <div class="header">
     <div class="wrap">
       <div class="header-bottom">
         <div class="logo">
@@ -549,12 +682,12 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="clearfix"></div>
+  </div> -->
+  <!-- <div class="clearfix"></div> -->
 
 
   <!-- header-section-ends -->
-  <div class="wrap">
+  <!-- <div class="wrap">
     <div id='cssmenu'>
       <ul>
         <li class='has-sub'><a href='index.html'><span>Home</span></a></li>
@@ -623,6 +756,140 @@
       </ul>
       </ul>
     </div>
+  </div> -->
+
+  <div class="container-fluid navbar-container-fluid">
+    <nav class="navbar">
+      <div class="navbar-header">
+        <button class="navbar-toggle" onclick="clickevent()" type="button" data-toggle="collapse"
+          data-target="#main-navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span style="color:black;">Menu</span>
+
+        </button>
+        <a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
+      </div>
+
+
+      <div class="collapse navbar-collapse" style="display: none;" id="main-navbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Us
+              <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Introduction</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Vision</a></li>
+              <li><a href="#">Mission Statements</a></li>
+              <li><a href="#">Corporate Values</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Our Clients</a></li>
+              <li><a href="#">Certificates</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sourcing Abilities</a></li>
+              <li><a href="#">Technical Info</a></li>
+              <li><a href="#">Projects Undertaken</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products
+              <i class="fa-solid fa-chevron-down"></i></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Piping Solutions</a></li>
+              <li><a href="#">Process Equipments</a></li>
+              <li><a href="#">Special Products & services</a></li>
+              <li><a href="#">Machineries</a></li>
+            </ul>
+          </li>
+          <li class="dropdown mega-dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Material of
+              Construction
+              <i class="fa-solid fa-chevron-down"></i></a>
+
+            <ul class="dropdown-menu mega-dropdown-menu row">
+              <li class="col-sm-3">
+                <ul>
+                  <li class="dropdown-header">Dresses</li>
+                  <li><a href="#">Default Navbar</a></li>
+                  <li><a href="#">Lovely Fonts</a></li>
+                  <li><a href="#">Responsive Dropdown </a></li>
+                  <li><a href="#">Default Navbar</a></li>
+                  <li><a href="#">Lovely Fonts</a></li>
+                  <li><a href="#">Responsive Dropdown </a></li>
+
+                  <li class="dropdown-header">Tops</li>
+                  <li><a href="#">Good Typography</a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li class="dropdown-header">Dresses</li>
+                  <li><a href="#">Default Navbar</a></li>
+                  <li><a href="#">Lovely Fonts</a></li>
+                  <li><a href="#">Responsive Dropdown </a></li>
+                  <li><a href="#">Default Navbar</a></li>
+                  <li><a href="#">Lovely Fonts</a></li>
+                  <li><a href="#">Responsive Dropdown </a></li>
+
+                  <li class="dropdown-header">Tops</li>
+                  <li><a href="#">Good Typography</a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li class="dropdown-header">Jackets</li>
+                  <li><a href="#">Easy to customize</a></li>
+                  <li><a href="#">Glyphicons</a></li>
+                  <li><a href="#">Pull Right Elements</a></li>
+
+                  <li class="dropdown-header">Pants</li>
+                  <li><a href="#">Coloured Headers</a></li>
+                  <li><a href="#">Primary Buttons & Default</a></li>
+                  <li><a href="#">Calls to action</a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li class="dropdown-header">Jackets</li>
+                  <li><a href="#">Easy to customize</a></li>
+                  <li><a href="#">Glyphicons</a></li>
+                  <li><a href="#">Pull Right Elements</a></li>
+
+                  <li class="dropdown-header">Pants</li>
+                  <li><a href="#">Coloured Headers</a></li>
+                  <li><a href="#">Primary Buttons & Default</a></li>
+                  <li><a href="#">Calls to action</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Quality
+              <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Quality Solutions</a></li>
+              <li><a href="#">Testing</a></li>
+              <li><a href="#">Packing & Despatch</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Calculator
+              <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Steel Plate Weight Calculator</a></li>
+              <li><a href="#">Flange Weight Calculator</a></li>
+              <li><a href="#">Steel Weight Calculator</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <!-- /.nav-collapse -->
+    </nav>
   </div>
 
   <div class="clearfix"></div>
@@ -888,6 +1155,53 @@
     });
   </script>
 
+
+  <script>
+    jQuery(document).ready(function () {
+
+
+      $(".dropdown").hover(
+        function () {
+          $('.dropdown-menu', this).fadeIn(300);
+        },
+        function () {
+          $('.dropdown-menu', this).fadeOut(300);
+        });
+    });
+
+
+
+    function clickevent() {
+      var button = document.getElementById('main-navbar')
+      if (button.style.display === 'none') {
+        button.style.display = 'block'
+      } else {
+        button.style.display = 'none'
+      }
+    }
+
+
+    if (screen.width >= 640) {
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+          $(".navbar").css({
+            'position': 'fixed',
+            'top': '0px',
+            'width': '100%',
+            'background': '#FFFFFF',
+            'z-index': '99',
+            'box-shadow': 'rgba(149, 157, 165, 0.2) 0px 8px 24px'
+          });
+        } else {
+          $(".navbar").css({
+            'position': 'relative',
+            'background': '#FFFFFF',
+            'width': '100%'
+          })
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
